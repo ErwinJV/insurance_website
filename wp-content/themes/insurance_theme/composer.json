@@ -1,0 +1,16 @@
+{
+    "name": "erwin/insurance_theme",
+    "description": "WP insurance theme",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Erwin\\InsuranceTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erwin Jimenez",
+            "email": "erwinjv98@gmail.com"
+        }
+    ]
+}
