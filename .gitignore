@@ -1,9 +1,6 @@
 node_modules
 .env
-
-wp-content/plugins/
-!wp-content/plugins/akismet
-
+uploads
 wp-content/themes/twentytwentyfive/
 wp-content/themes/twentytwentyfour/ 
-twentytwentythree/ 
+wp-content/themes/twentytwentythree
