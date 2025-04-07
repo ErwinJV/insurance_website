@@ -1,6 +1,8 @@
 node_modules
 .env
-uploads
+wp-content/uploads/
+!wp-content/uploads/wpforms
+!wp-content/uploads/wpcf7_uploads/
 wp-content/themes/twentytwentyfive/
 wp-content/themes/twentytwentyfour/ 
 wp-content/themes/twentytwentythree
