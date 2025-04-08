@@ -24,6 +24,49 @@
 </main>
 
 
+ <!-- CUSTOMERS OPINION -->
+
+<section class="w-full h-[100vh] bg-black" >
+
+<div class="container flex justify-center items-center h-full my-auto mx-auto py-3 ">
+ <div class="grid grid-cols-1 md:grid-cols-5 w-full h-[70%] md:h-1/2">
+   <div class="w-full md:col-span-3  bg-amber-200 ">
+         <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-1.jpg)]">
+
+          </div>
+          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-2.jpg)]"></div>
+          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-3.jpg)]"></div>
+
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+
+    <div class="bg-red-700 md:col-span-2 ">
+
+    </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
   <!-- CONTACT FORM -->
 <section id="contact-form" class="w-full h-[100vh] flex justify-center items-center bg-black sm:bg-white">
 <div class="container xl:w-[80%] 2xl:w-[90%] bg-[url(/src/img/bg-contact-form.jpg)] mx-auto rounded-xl">
@@ -40,7 +83,7 @@
               'theme_location' => 'social_links',
               'container_id'   => 'social-links-contact',
               'menu_id'        => 'social-links-contact-menu',
-              'menu_class'     => 'flex  space-x-5 mt-5',
+              'menu_class'     => 'flex space-x-5 mt-5',
           ]);
       ?>
 
@@ -55,8 +98,8 @@
 
 
 
-
-
 </section>
+
+
 <?php get_footer()?>
 

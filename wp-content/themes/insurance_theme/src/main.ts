@@ -14,6 +14,7 @@ new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+
   effect: "fade",
 
   // Navigation arrows

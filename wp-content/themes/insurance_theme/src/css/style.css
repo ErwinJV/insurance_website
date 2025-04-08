@@ -38,6 +38,10 @@ textarea:active {
   outline: none;
 }
 
+.swiper {
+  @apply w-full h-full;
+}
+
 #wpcf7-f9-o1 p {
   @apply my-4 active:outline-0;
 }
