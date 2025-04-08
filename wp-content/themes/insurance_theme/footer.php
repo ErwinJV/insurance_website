@@ -32,13 +32,20 @@
               <p class="text-black self-center">
                 Copyright © 2025 Insurance <sup>®</sup>. All rights reserved.
               </p>
-
-              <div class="px-2 flex flex-row space-x-7 sm:space-x-10">
+                 <?php
+                     wp_nav_menu([
+                         'theme_location' => 'social_links_footer',
+                         'container_id'   => 'social-links-footer',
+                         'menu_id'        => 'social-links-footer-menu',
+                         'menu_class'     => 'px-2 flex flex-row space-x-7 sm:space-x-10',
+                     ]);
+                 ?>
+              <!-- <div class="px-2 flex flex-row space-x-7 sm:space-x-10">
                 <a href="#"><i class="fa-brands fa-whatsapp text-black text-2xl sm:text-4xl"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram text-black text-2xl sm:text-4xl"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook text-black text-2xl sm:text-4xl"></i></a>
 
-              </div>
+              </div> -->
          </div>
       </footer>
   <?php wp_footer(); ?>

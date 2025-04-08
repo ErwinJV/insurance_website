@@ -28,8 +28,9 @@ class Schema
     ];
 
     public static array $nav_args = [
-        'main_navigation' => 'Main Navigation',
-        'social_links'    => 'Social Links',
+        'main_navigation'     => 'Main Navigation',
+        'social_links'        => 'Social Links',
+        'social_links_footer' => 'Social Links Footer',
     ];
 
     public static array $theme_support = [
