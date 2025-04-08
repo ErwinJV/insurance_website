@@ -19,6 +19,7 @@ export default defineConfig({
       input: {
         "main-scripts": resolve(__dirname, "src/main.ts"),
         "main-styles": resolve(__dirname, "src/css/style.css"),
+        images: resolve(__dirname, "src/img"),
       },
       output: {
         entryFileNames: `[hash].js`,

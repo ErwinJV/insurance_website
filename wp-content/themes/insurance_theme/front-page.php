@@ -1,4 +1,12 @@
-<?php get_header()?>
+<?php
+
+    use insurance_php_lib\classes\Assets;
+
+    $assets = new Assets();
+
+    get_header();
+
+?>
 
 <!-- MAIN SECTION -->
 <main class="w-full h-[100vh] bg-cover bg-[url(/src/img/bg-main-front-page.jpg)]">
@@ -26,22 +34,48 @@
 
  <!-- CUSTOMERS OPINION -->
 
-<section class="w-full h-[100vh] bg-black" >
+<section class="w-full h-screen" >
 
-<div class="container flex justify-center items-center h-full my-auto mx-auto py-3 ">
- <div class="grid grid-cols-1 md:grid-cols-5 w-full h-[70%] md:h-1/2">
-   <div class="w-full md:col-span-3  bg-amber-200 ">
+<div class="container flex flex-col justify-center items-center w-full h-full my-auto mx-auto py-3">
+
+ <h1 class="text-4xl uppercase self-start font-bold">#clientesfelices</h1>
+
+
+    <div class="w-[80%] h-auto">
          <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
-          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-1.jpg)]">
+          <div class="swiper-slide relative ">
+
+            <img class="h-full w-full" src="<?php echo $assets->get_asset('src/img/customers-happy-1.jpg'); ?>" alt="">
+
+             <div class="absolute left-1.5 bottom-1 flex flex-col items-start space-y-4 z-10">
+               <span class="p-2 bg-white rounded-xl font-bold text-xs lg:text-lg  2xl:text-xl">
+               Lorem ipsum, sit amet
+              </span>
+              <span class="bg-black p-3 text-white text-sm lg:text-xl 2xl:text-2xl font-bold rounded-xl w-[auto] ">
+               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus amet"
+              </span>
+             </div>
 
           </div>
-          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-2.jpg)]"></div>
-          <div class="swiper-slide bg-cover w-full h-full  bg-[url(/src/img/customers-happy-3.jpg)]"></div>
 
+           <div class="swiper-slide relative">
+
+             <img class="h-full w-full" src="<?php echo $assets->get_asset('src/img/customers-happy-2.jpg'); ?>" alt="">
+
+             <div class="absolute left-1.5 bottom-1 flex flex-col items-start space-y-4 z-10">
+               <span class="p-2 bg-white rounded-xl font-bold text-xs 2xl:text-base">
+               Lorem ipsum, sit amet
+              </span>
+              <span class="bg-black p-3 text-white text-sm 2xl:text-lg font-bold rounded-xl w-[auto] ">
+               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus amet"
+              </span>
+             </div>
+
+          </div>
         </div>
         <!-- If we need pagination -->
         <!-- <div class="swiper-pagination"></div> -->
@@ -55,15 +89,15 @@
       </div>
     </div>
 
-    <div class="bg-red-700 md:col-span-2 ">
-
-    </div>
-
-    </div>
-
 
   </div>
 
+</section>
+
+<section>
+   <div class="h-full flex justify-center items-end">
+      <img class="w-full h-10/12" src="<?php echo $assets->get_asset('src/img/agent-insurance.png'); ?>" alt="agent-insurance">
+    </div>
 </section>
 
 

@@ -50,6 +50,19 @@ textarea:active {
   @apply text-xl;
 }
 
+.whatsapp-icon-contact {
+  @apply text-green-500 text-3xl md:text-5xl me-2;
+}
+
+.instagram-icon-contact {
+  @apply text-orange-500 text-3xl md:text-5xl me-2;
+}
+
+.whatsapp-icon-footer,
+.instagram-icon-footer {
+  @apply text-black text-2xl sm:text-4xl;
+}
+
 @media (min-width: 768px) {
   input[type="text"],
   input[type="email"],
