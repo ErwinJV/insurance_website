@@ -8,7 +8,7 @@ const BASE = __dirname.replace(ROOT, "");
 
 export default defineConfig({
   // TODO: Resolve dev domain issue
-  base: "insurance/" + BASE + "/dist/",
+  base: "/insurance/" + BASE + "/dist/",
   build: {
     manifest: true,
     assetsDir: ".",
