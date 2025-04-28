@@ -34,7 +34,7 @@
 
  <!-- CUSTOMERS OPINION -->
 
-<section class="w-full h-screen" >
+<section class="w-full h-screen select-none" >
 
 <div class="container flex flex-col justify-center items-center w-full h-full my-auto mx-auto py-3">
 
@@ -49,7 +49,7 @@
           <!-- Slides -->
           <div class="swiper-slide relative ">
 
-            <img class="h-full w-full" src="<?php echo $assets->get_asset('src/img/customers-happy-1.jpg'); ?>" alt="">
+           <img class="h-full w-full" src="<?php echo "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ?>" alt="">
 
              <div class="absolute left-1.5 bottom-1 flex flex-col items-start space-y-4 z-10">
                <span class="p-2 bg-white rounded-xl font-bold text-xs lg:text-lg  2xl:text-xl">
@@ -64,13 +64,13 @@
 
            <div class="swiper-slide relative">
 
-             <img class="h-full w-full" src="<?php echo $assets->get_asset('src/img/customers-happy-2.jpg'); ?>" alt="">
+             <img class="h-full w-full" src="<?php echo "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" ?>" alt="">
 
              <div class="absolute left-1.5 bottom-1 flex flex-col items-start space-y-4 z-10">
-               <span class="p-2 bg-white rounded-xl font-bold text-xs 2xl:text-base">
+               <span class="p-2 bg-white rounded-xl font-bold text-xs lg:text-lg  2xl:text-xl">
                Lorem ipsum, sit amet
               </span>
-              <span class="bg-black p-3 text-white text-sm 2xl:text-lg font-bold rounded-xl w-[auto] ">
+              <span class="bg-black p-3 text-white text-sm lg:text-xl 2xl:text-2xl font-bold rounded-xl w-[auto] ">
                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis delectus amet"
               </span>
              </div>
@@ -94,10 +94,22 @@
 
 </section>
 
-<section>
-   <div class="h-full flex justify-center items-end">
-      <img class="w-full h-10/12" src="<?php echo $assets->get_asset('src/img/agent-insurance.png'); ?>" alt="agent-insurance">
-    </div>
+<section class=" bg-gray-400">
+
+  <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+        <div class="md:5/12 lg:w-5/12">
+          <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+" alt="image" loading="lazy" width="" height="">
+        </div>
+        <div class="md:7/12 lg:w-6/12">
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">Lorem ipsum sit amet sit amet consectetur adipisicing elit. Eum omnis </h2>
+          <p class="mt-6 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
+          <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+        </div>
+      </div>
+  </div>
+
 </section>
 
 
