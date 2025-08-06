@@ -6,9 +6,11 @@ const ROOT = resolve("../../../");
 
 const BASE = __dirname.replace(ROOT, "");
 
+console.log({ BASE, ROOT });
+
 export default defineConfig({
   // TODO: Resolve dev domain issue
-  base: "/insurance/" + BASE + "/dist/",
+  base: BASE + "/dist/",
   build: {
     manifest: true,
     assetsDir: ".",

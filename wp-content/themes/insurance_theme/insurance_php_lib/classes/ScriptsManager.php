@@ -19,7 +19,7 @@ final class ScriptsManager extends ActionManager
     protected function create_action(array $action_args): Action
     {
         extract($action_args, EXTR_OVERWRITE);
-        return new Script($type_script, $name, $path_uri, $deps, $version, $args);
+        return new Script($type_script, $name, $path_uri, $deps, $version, $args, $is_cdn);
     }
 
     #[\Override]

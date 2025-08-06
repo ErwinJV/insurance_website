@@ -14,12 +14,13 @@ class Style implements Action
         public string $path_uri,
         public array $deps,
         public string $version,
-        public string $media
+        public string $media,
+        public bool $is_cdn = false
     ) {}
 
     private function add_style(): void
     {
-        wp_enqueue_style($this->name, $this->get_asset($this->path_uri), $this->deps, $this->version, $this->media);
+        wp_enqueue_style($this->name, $this->is_cdn ? $this->path_uri : $this->get_asset($this->path_uri), $this->deps, $this->version, $this->media);
     }
 
     #[\Override]

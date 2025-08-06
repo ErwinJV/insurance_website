@@ -28,6 +28,9 @@ if (file_exists(__DIR__ . '/.env')) {
 
 define('ENV', getenv('ENV'));
 
+// define('WP_HOME', 'http://elvisjimenezinsurance.com');
+// define('WP_SITEURL', 'http: //elvisjimenezinsurance.com');
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', getenv('DB_NAME'));
@@ -95,7 +98,7 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define('WP_DEBUG', ENV === 'prod');
+define('WP_DEBUG', true);
 
 /* Add any custom values between this line and the "stop editing" line. */
 

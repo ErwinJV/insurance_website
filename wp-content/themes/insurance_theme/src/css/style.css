@@ -63,6 +63,41 @@ textarea:active {
   @apply text-black text-2xl sm:text-4xl;
 }
 
+.contact-submit-button {
+  @apply !bg-blue-900 !rounded w-full;
+}
+
+.contact-submit-label {
+  @apply !text-white !font-bold !text-xl;
+}
+
+.contact-submit-input {
+  @apply !rounded;
+}
+
+/* .swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  width: auto !important;
+}
+
+.swiper-slide {
+  width: auto;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  flex-shrink: 0;
+} */
+
+.bg-top-center {
+  background-position: top center;
+}
+
 @media (min-width: 768px) {
   input[type="text"],
   input[type="email"],
