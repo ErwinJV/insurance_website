@@ -1,13 +1,13 @@
 
 
 
-<footer class="flex flex-col items-center justify-center bg-[url(/src/img/insurance-footer-background.jpg)]  w-full  min-h-[717px] ">
+<footer class="flex flex-col items-center justify-center bg-[url(/src/img/insurance-footer-background.webp)] bg-cover bg-bottom  py-12 m-h-[] ">
     <div class="container mx-auto   p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+              <a href="#" class="flex items-center">
+               <img src="<?php echo INSURANCE_RESOURCES_URI . '/img/elvis-jimenez-insurance-logotype.jpg' ?>" class="w-[320px]" alt="Elvis JimenezInsurance Logotype" />
+
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

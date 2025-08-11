@@ -62,6 +62,9 @@ class Schema
         'post-thumbnails',
         'widgets',
         ['custom-logo', [
+            'height'      => 100,
+            'width'       => 300,
+
             'flex-width'  => true,
             'flex-height' => true,
             'header-text' => [SITE_NAME, SITE_NAME . ' logo'],
