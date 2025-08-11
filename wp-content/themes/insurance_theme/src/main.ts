@@ -6,14 +6,23 @@ import { Navigation, Pagination } from "swiper/modules";
 // init Swiper:
 new Swiper(".swiper", {
   // configure Swiper to use modules
+  autoplay: true,
+
   modules: [Navigation, Pagination],
   direction: "horizontal",
   loop: true,
+  spaceBetween: 10,
+  slidesPerView: "auto", // Para slides de ancho variable
+  freeMode: true, // Útil cuando hay overflow
+  observer: true, // Detecta cambios en el DOM
+  observeParents: true, // Observa contenedores padres
+  resizeObserver: true, // Para responsive
 
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
   },
+
   effect: "fade",
 
   // Navigation arrows

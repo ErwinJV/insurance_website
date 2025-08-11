@@ -1,62 +1,71 @@
-<?php get_header()?>
+<?php
+
+    use insurance_php_lib\classes\Assets;
+
+    $assets = new Assets();
+
+    get_header();
+
+?>
 
 <!-- MAIN SECTION -->
-<main class="w-full h-[100vh] bg-cover bg-[url(/src/img/bg-main-front-page.jpg)]">
-   <div class="container mx-auto h-full">
 
-     <div class="grid grid-cols-1 lg:grid-cols-3 h-full">
+<?php require INSURANCE_VIEWS_PATH . "/hero-section.php"; ?>
 
-        <div class="hidden lg:inline lg:col-span-2">
+
+<!-- SERVICES SECTION -->
+
+<?php require INSURANCE_VIEWS_PATH . '/services-section.php'; ?>
+<?php require INSURANCE_VIEWS_PATH . "/advantages-section.php"; ?>
+
+
+ <!-- CUSTOMERS OPINION -->
+
+<?php require INSURANCE_VIEWS_PATH . "/customers-opinion.php"; ?>
+
+
+
+
+<!--
+<section class=" bg-gray-400">
+
+
+  <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+        <div class="md:5/12 lg:w-5/12">
+          <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+" alt="image" loading="lazy" width="" height="">
         </div>
-
-         <div class="flex flex-col justify-end lg:justify-center text-white p-2 sm:p-0 ">
-           <h1 class="font-bold text-4xl lg:text-6xl mb-1">Lorem ipsum sit amet</h1>
-           <h3 class="font-semibold text-2xl lg:text-3xl">Lorem ipsum sit amet</h3>
-           <p class="mt-2 text-lg lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab voluptatibus, fugiat impedit ut vel non laudantium ad deleniti magnam veniam dolores nostrum quas nulla cupiditate aliquid architecto velit quam?
-           </p>
+        <div class="md:7/12 lg:w-6/12">
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">Lorem ipsum sit amet sit amet consectetur adipisicing elit. Eum omnis </h2>
+          <p class="mt-6 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
+          <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
         </div>
+      </div>
+  </div>
 
-     </div>
+</section> -->
 
-   </div>
 
-</main>
+<!-- <section class= " w-full h-screen bg-[url(/src/img/insurance-body-background.webp)] bg-cover" >
+
+
+</section> -->
 
 
   <!-- CONTACT FORM -->
-<section id="contact-form" class="w-full h-[100vh] flex justify-center items-center bg-black sm:bg-white">
-<div class="container xl:w-[80%] 2xl:w-[90%] bg-[url(/src/img/bg-contact-form.jpg)] mx-auto rounded-xl">
- <div class="grid grid-cols-1 lg:grid-cols-2 text-white rounded-lg">
+  <div class="h-16"></div>
+<?php require INSURANCE_VIEWS_PATH . "/contact-form.php"; ?>
 
-    <div class="hidden lg:flex">
-    </div>
+<div class="h-16"></div>
+<!-- SERVICES SLIDER -->
 
-    <div class="flex flex-col items-center space-y-2 p-3 bg-black lg:rounded-r-xl">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl mb-5 font-bold">Contáctanos</h1>
-
-      <?php
-          wp_nav_menu([
-              'theme_location' => 'social_links',
-              'container_id'   => 'social-links-contact',
-              'menu_id'        => 'social-links-contact-menu',
-              'menu_class'     => 'flex  space-x-5 mt-5',
-          ]);
-      ?>
-
-       <?php
-           echo do_shortcode('[contact-form-7 id="f573abe" title="Contáctanos"]');
-       ?>
-    </div>
-
-
- </div>
-</div>
+<?php
+    require INSURANCE_VIEWS_PATH . "/services-slider.php";
+?>
 
 
 
 
-
-</section>
 <?php get_footer()?>
 

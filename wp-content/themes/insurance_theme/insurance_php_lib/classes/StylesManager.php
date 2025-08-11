@@ -19,7 +19,7 @@ final class StylesManager extends ActionManager
     protected function create_action(array $action_args): Action
     {
         extract($action_args, EXTR_OVERWRITE);
-        return new Style($type_script, $name, $path_uri, $deps, $version, $media);
+        return new Style($type_script, $name, $path_uri, $deps, $version, $media, $is_cdn);
     }
 
     #[\Override]

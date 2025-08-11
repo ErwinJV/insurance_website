@@ -14,12 +14,14 @@ class Script implements Action
         public string $path_uri,
         public array $deps,
         public string | null $version,
-        public array | bool $args
+        public array | bool $args,
+        public bool $is_cdn = false
     ) {}
 
     private function add_scripts(): void
     {
-        wp_enqueue_script($this->name, $this->get_asset($this->path_uri), $this->deps, $this->version, $this->args);
+        wp_enqueue_script($this->name, $this->is_cdn ? $this->path_uri
+            : $this->get_asset($this->path_uri), $this->deps, $this->version, $this->args);
     }
 
     #[\Override]

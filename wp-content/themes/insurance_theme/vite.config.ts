@@ -6,9 +6,11 @@ const ROOT = resolve("../../../");
 
 const BASE = __dirname.replace(ROOT, "");
 
+console.log({ BASE, ROOT });
+
 export default defineConfig({
   // TODO: Resolve dev domain issue
-  base: "insurance/" + BASE + "/dist/",
+  base: BASE + "/dist/",
   build: {
     manifest: true,
     assetsDir: ".",
@@ -19,6 +21,7 @@ export default defineConfig({
       input: {
         "main-scripts": resolve(__dirname, "src/main.ts"),
         "main-styles": resolve(__dirname, "src/css/style.css"),
+        //images: resolve(__dirname, "src/img"),
       },
       output: {
         entryFileNames: `[hash].js`,

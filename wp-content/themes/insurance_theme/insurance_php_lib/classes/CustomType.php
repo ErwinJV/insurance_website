@@ -37,7 +37,7 @@ class CustomType implements Action
             'items_list_navigation' => __('Navigation ' . $this->data['plural'], SITE_NAME),
             'filter_items_list'     => __('Filter ' . $this->data['plural'], SITE_NAME),
             'not_found'             => __('No found', 'sushi'),
-            'not_found_in_trash'    => __('Not found in trash', 'sushi'),
+            'not_found_in_trash'    => __('Not found in trash', SITE_NAME),
         ];
 
         $rewrite = [
