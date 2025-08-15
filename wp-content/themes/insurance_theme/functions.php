@@ -4,7 +4,7 @@ define('INSURANCE_PATH', get_template_directory());
 define('INSURANCE_ROOT', str_replace(ABSPATH, '/', dirname(__DIR__, 1)));
 define('INSURANCE_LIB', INSURANCE_PATH . '/insurance_php_lib');
 define("INSURANCE_VIEWS_PATH", INSURANCE_LIB . "/views");
-
+define("INSURANCE_COMPONENTS_PATH", INSURANCE_LIB . "/components");
 define('INSURANCE_URI', get_template_directory_uri());
 
 define('INSURANCE_ASSETS_PATH', INSURANCE_PATH . '/dist');

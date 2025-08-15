@@ -21,7 +21,11 @@
 
  <!-- CUSTOMERS OPINION -->
 
-<?php require INSURANCE_VIEWS_PATH . "/customers-opinion.php"; ?>
+<?php
+    //require INSURANCE_VIEWS_PATH . "/customers-opinion.php";
+?>
+
+<?php require INSURANCE_VIEWS_PATH . "/testimonials-section.php"; ?>
 
 
 
@@ -55,7 +59,7 @@
 
   <!-- CONTACT FORM -->
   <div class="h-16"></div>
-<?php require INSURANCE_VIEWS_PATH . "/contact-form.php"; ?>
+<?php require INSURANCE_VIEWS_PATH . "/contact-form-section.php"; ?>
 
 <div class="h-16"></div>
 <!-- SERVICES SLIDER -->

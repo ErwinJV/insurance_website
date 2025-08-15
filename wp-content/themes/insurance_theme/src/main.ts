@@ -1,6 +1,7 @@
 import Alpine from "alpinejs";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+import { padFooter } from "./frontend";
 // import Swiper and modules styles
 
 // init Swiper:
@@ -37,7 +38,46 @@ new Swiper(".swiper", {
   },
 });
 
-import { padFooter } from "./frontend";
+const testimonialsSwiper = new Swiper(".testimonials-swiper", {
+  loop: true,
+  slidesPerView: 1,
+
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (_, className) {
+      return '<span class="' + className + '"></span>';
+    },
+  },
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
+
+// Controlar el slider con el botón de flecha derecha
+document.querySelector(".next-button")?.addEventListener("click", function () {
+  testimonialsSwiper.slideNext();
+});
+
+// const highlightText = document.querySelector(".highlight-text");
+// setTimeout(() => {
+//   highlightText.style.opacity = "1";
+//   highlightText.style.transform = "translateY(0)";
+// }, 300);
+
+const padNav = document.getElementById("pad-nav");
+const mainNav = document.getElementById("insurance-main-nav");
+
+if (padNav && mainNav) {
+  const heightNav = mainNav.offsetHeight;
+  padNav.style.height = `${heightNav}px`;
+}
 
 //@ts-ignore
 window.Alpine = Alpine;

@@ -6,10 +6,10 @@
                     SEGURIDAD FINANCIERA
                 </span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Nuestros <span class="section-title text-orange-500">Servicios</span>
             </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+            <p class="text-xl text-white max-w-3xl mx-auto mt-6">
                 Protección integral diseñada para cada etapa de tu vida. Soluciones personalizadas para tu seguridad y bienestar financiero.
             </p>
         </div>
@@ -145,7 +145,7 @@
                     <p class="text-orange-500 text-xl mb-10 max-w-2xl mx-auto">
                         Nuestros expertos te ayudarán a encontrar el seguro perfecto para tus necesidades específicas.
                     </p>
-                    <button class=" hover:bg-gray-50 text-orange-500 font-bold py-5 px-14 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    <button class=" hover:bg-orange-500 cursor-pointer  text-white bg-[#133251] font-bold py-5 px-14 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-lg">
                         <i class="fas fa-phone-alt mr-3"></i>Solicitar Asesoría Gratis
                     </button>
                     <div class="mt-8">

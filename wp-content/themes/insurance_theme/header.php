@@ -10,7 +10,7 @@
 <header class="absolute  w-full z-50 " x-data="header">
 
 
-<nav class=" border-gray-200 ">
+<nav class="border-gray-200 " id="insurance-main-nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="<?php echo INSURANCE_RESOURCES_URI . '/img/elvis-jimenez-insurance-logotype.jpg' ?>" class="w-[320px] " alt="Elvis JimenezInsurance Logotype" />
