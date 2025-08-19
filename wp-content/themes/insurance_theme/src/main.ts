@@ -3,7 +3,7 @@ import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { padFooter } from "./frontend";
 
-Swiper.use([Autoplay, Pagination, Pagination]);
+Swiper.use([Autoplay, Navigation]);
 // import Swiper and modules styles
 
 // init Swiper:
@@ -53,8 +53,6 @@ const testimonialsSwiper = new Swiper(".testimonials-swiper", {
   },
   autoplay: {
     disableOnInteraction: false,
-    reverseDirection: false,
-    waitForTransition: true,
   },
   effect: "fade",
   fadeEffect: {

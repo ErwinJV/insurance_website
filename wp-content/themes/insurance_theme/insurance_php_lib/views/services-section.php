@@ -3,6 +3,13 @@
 
        $services = [
            [
+               "title"       => "Obama Care",
+               "description" => "Planes de salud asequibles y adaptados a tus necesidades. Obtén cobertura médica de calidad con opciones flexibles y accesibles.",
+               "icon"        => "fas fa-stethoscope",
+               "image"       => "https://images.unsplash.com/photo-1470116945706-e6bf5d5a53ca?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+               "link"        => "#",
+           ],
+           [
                'title'       => 'Polizas de Salud',
                'description' => 'Cobertura médica accesible con planes adaptados a tu presupuesto y necesidades familiares. Garantizamos atención de calidad sin comprometer tu economía.',
                'icon'        => 'fas fa-heartbeat',
@@ -13,7 +20,7 @@
                'title'       => 'Gastos Finales',
                'description' => 'Protección para tus seres queridos, cubriendo todos los gastos funerarios y trámites finales. Alivia la carga económica en momentos difíciles.',
                'icon'        => 'fas fa-hand-holding-heart',
-               'image'       => 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=90',
+               'image'       => 'https://images.unsplash.com/photo-1522752622479-65eefd320386?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                'link'        => '#',
            ],
            [
@@ -24,7 +31,7 @@
                'link'        => '#',
            ],
            [
-               'title'       => 'Planes Visión/Dental',
+               'title'       => 'Seguros Complementarios',
                'description' => 'Cobertura especializada para tu salud visual y dental con redes de profesionales certificados. Cuida tu sonrisa y visión con nuestros planes integrales.',
                'icon'        => 'fas fa-eye',
                'image'       => "https://images.unsplash.com/photo-1662837625421-5fd8ed6131a0?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

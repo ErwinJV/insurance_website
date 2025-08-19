@@ -50,16 +50,17 @@
                 <!-- Columna izquierda: Testimonios -->
                 <div class="order-2 lg:order-1">
                     <!-- Contenedor relativo para el botón de flecha -->
-                    <div class="relative">
+                    <div class="relative rounded
+">
                         <!-- Carrusel de testimonios -->
-                        <div class="swiper testimonials-swiper ">
-                            <div class="swiper-wrapper">
+                        <div class="swiper testimonials-swiper">
+                            <div class="swiper-wrapper  ">
                                 <!-- Testimonio 1 -->
 
                               <?php foreach ($testimonials as $testimonial): ?>
 
                                   <div class="swiper-slide ">
-                                    <div class="testimonial-card bg-white p-8 rounded-xl relative border-l-4 border-orange-500 w-[610px] h-[236px]">
+                                    <div class="testimonial-card bg-white p-8 rounded-xl relative border-l-4 border-orange-500 h-[236px]">
                                         <i class="fas fa-quote-right quote-icon"></i>
                                         <div class="flex items-start mb-6">
                                             <img src="<?php echo $testimonial['image']; ?>"
