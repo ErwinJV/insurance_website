@@ -7,13 +7,13 @@
     <?php wp_head(); ?>
 </head>
 <body class="bg-[#133251]" >
-<header class="absolute  w-full z-50 " x-data="header">
+<header class="  w-full z-50 " x-data="header">
 
 
 <nav class="border-gray-200 " id="insurance-main-nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="<?php echo INSURANCE_RESOURCES_URI . '/img/elvis-jimenez-insurance-logotype.jpg' ?>" class="w-[320px] " alt="Elvis JimenezInsurance Logotype" />
+        <img src="<?php echo INSURANCE_RESOURCES_URI . '/img/elvis-jimenez-insurance-logotype.jpg' ?>" class="w-[280px] " alt="Elvis JimenezInsurance Logotype" />
 
     </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">

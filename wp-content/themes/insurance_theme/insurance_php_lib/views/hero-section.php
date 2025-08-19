@@ -1,21 +1,21 @@
-<main class="w-full h-screen bg-cover bg-[url(/src/img/insurance-hero-background.webp)]">
-   <div class="container mx-auto h-ful flex items-center ">
+<main class="w-full bg-cover bg-[url(/src/img/insurance-hero-background.webp)]" id="hero-page" >
+   <div class="container mx-auto h-full flex items-center ">
 
-     <div class="flex flex-col lg:flex-row lg:items-center mt-36">
-
+     <div class="flex flex-col lg:flex-row lg:items-center ">
 
 
          <div class="hero-content bg-white p-4 rounded">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#133251] mb-6 leading-tight">
                     Protege a tu <span class="highlight-text">familia</span> con los mejores seguros
                 </h1>
-                <p class="text-xl text-gray-600 mb-10 max-w-2xl">
+                <p class="text-xl text-gray mb-10 max-w-2xl text-">
                     Más de 15 años ayudando a familias y empresas a proteger lo que más valoran. Con soluciones personalizadas y atención dedicada, Elvis Jiménez te ofrece la tranquilidad que mereces.
                 </p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
                     <a href="#contacto" class="bg-[#133251] hover:bg-orange-500 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 inline-flex items-center justify-center">
-                        <i class="fas fa-phone-alt mr-3"></i>
+
                         Solicitar asesoría
+                          <i class="fas fa-phone-alt ml-3"></i>
                     </a>
                     <a href="#servicios" class="bg-white border-2 border-[#133251] text-[#133251] hover:bg-orange-500 hover:border-orange-500 hover:text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 inline-flex items-center justify-center">
                         <i class="fas fa-shield-alt mr-3"></i>

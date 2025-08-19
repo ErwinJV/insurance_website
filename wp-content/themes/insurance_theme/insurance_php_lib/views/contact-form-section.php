@@ -1,5 +1,6 @@
     <!-- Sección de contacto -->
-    <section class="contact-section ">
+    <section class="contact-section" id="contacto" >
+>
         <div class="contact-content">
             <!-- Titulo de la sección -->
             <div class="text-center mb-16">

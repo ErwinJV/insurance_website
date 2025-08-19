@@ -13,9 +13,9 @@
     get_header();
 ?>
 
-<div id="pad-nav"></div>
+
   <!-- Sección Hero - Seguros Complementarios -->
-    <section id="complementary" class="hero-section flex items-center py-16 px-4 sm:px-6 lg:px-8 service-section">
+    <section id="complementary" class="hero-section  flex items-center py-16 px-4 sm:px-6 lg:px-8 service-section" id="hero-page">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
             <!-- Contenido -->
             <div class="hero-content">

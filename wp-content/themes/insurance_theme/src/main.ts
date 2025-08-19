@@ -1,7 +1,9 @@
 import Alpine from "alpinejs";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { padFooter } from "./frontend";
+
+Swiper.use([Autoplay, Pagination, Pagination]);
 // import Swiper and modules styles
 
 // init Swiper:
@@ -42,7 +44,6 @@ const testimonialsSwiper = new Swiper(".testimonials-swiper", {
   loop: true,
   slidesPerView: 1,
 
-  spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -51,8 +52,9 @@ const testimonialsSwiper = new Swiper(".testimonials-swiper", {
     },
   },
   autoplay: {
-    delay: 7000,
     disableOnInteraction: false,
+    reverseDirection: false,
+    waitForTransition: true,
   },
   effect: "fade",
   fadeEffect: {
@@ -73,10 +75,17 @@ document.querySelector(".next-button")?.addEventListener("click", function () {
 
 const padNav = document.getElementById("pad-nav");
 const mainNav = document.getElementById("insurance-main-nav");
+const heroPage = document.getElementById("hero-page");
 
 if (padNav && mainNav) {
   const heightNav = mainNav.offsetHeight;
   padNav.style.height = `${heightNav}px`;
+}
+
+if (heroPage && mainNav) {
+  const heightNav = mainNav.offsetHeight;
+  console.log({ heroPage });
+  heroPage.style.height = `calc(100vh - ${heightNav}px)`;
 }
 
 //@ts-ignore
