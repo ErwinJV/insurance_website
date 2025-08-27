@@ -2,6 +2,7 @@
 namespace insurance_php_lib;
 
 use insurance_php_lib\classes\ActionManager;
+use insurance_php_lib\classes\CustomTypesManager;
 use insurance_php_lib\classes\NavMenusManager;
 use insurance_php_lib\classes\ScriptsManager;
 use insurance_php_lib\classes\StylesManager;
@@ -23,8 +24,10 @@ class App
         $this->init(new ScriptsManager(Schema::$scripts_args));
         $this->init(new StylesManager(Schema::$styles_args));
         $this->init(new NavMenusManager(Schema::$nav_args));
+
         $this->init(new ThemeSupportManager(Schema::$theme_support));
 
+        $this->init(new CustomTypesManager(Schema::$custom_types));
     }
 
     public function config(): Config

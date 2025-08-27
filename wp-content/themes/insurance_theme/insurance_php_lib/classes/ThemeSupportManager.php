@@ -9,7 +9,10 @@ class ThemeSupportManager extends ActionManager
     private array $actions = [];
     public function __construct(
         private array $args
-    ) {}
+    ) {
+
+        $this->add_actions();
+    }
 
     #[\Override]
     protected function add_actions(): void
@@ -21,7 +24,7 @@ class ThemeSupportManager extends ActionManager
     }
 
     #[\Override]
-    protected function create_action(array $action_args): Action
+    protected function create_action(array | string $action_args): Action
     {
         return new ThemeSupport($action_args);
     }

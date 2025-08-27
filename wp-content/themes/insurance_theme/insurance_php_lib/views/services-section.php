@@ -1,43 +1,28 @@
 
    <?php
 
-       $services = [
-           [
-               "title"       => "Obama Care",
-               "description" => "Planes de salud asequibles y adaptados a tus necesidades. Obtén cobertura médica de calidad con opciones flexibles y accesibles.",
-               "icon"        => "fas fa-stethoscope",
-               "image"       => "https://images.unsplash.com/photo-1470116945706-e6bf5d5a53ca?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-               "link"        => "#",
-           ],
-           [
-               'title'       => 'Polizas de Salud',
-               'description' => 'Cobertura médica accesible con planes adaptados a tu presupuesto y necesidades familiares. Garantizamos atención de calidad sin comprometer tu economía.',
-               'icon'        => 'fas fa-heartbeat',
-               'image'       => 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=90',
-               'link'        => '#',
-           ],
-           [
-               'title'       => 'Gastos Finales',
-               'description' => 'Protección para tus seres queridos, cubriendo todos los gastos funerarios y trámites finales. Alivia la carga económica en momentos difíciles.',
-               'icon'        => 'fas fa-hand-holding-heart',
-               'image'       => 'https://images.unsplash.com/photo-1522752622479-65eefd320386?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-               'link'        => '#',
-           ],
-           [
-               'title'       => 'Vida + Inversión (IUL)',
-               'description' => 'Protege a tu familia mientras construyes un patrimonio a largo plazo con rendimientos potenciales. Combina seguridad con crecimiento financiero.',
-               'icon'        => 'fas fa-chart-line',
-               'image'       => 'https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&h=800&q=90',
-               'link'        => '#',
-           ],
-           [
-               'title'       => 'Seguros Complementarios',
-               'description' => 'Cobertura especializada para tu salud visual y dental con redes de profesionales certificados. Cuida tu sonrisa y visión con nuestros planes integrales.',
-               'icon'        => 'fas fa-eye',
-               'image'       => "https://images.unsplash.com/photo-1662837625421-5fd8ed6131a0?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-               'link'        => '#',
-           ],
-       ];
+       /**
+        * Servicios Section
+        *
+        * Muestra una sección de servicios con tarjetas que incluyen imagen, título, descripción e ícono.
+        *
+        * @package Insurance_Theme
+        */
+
+       $services = get_posts([
+           'post_type'      => 'servicios-seguros',
+           'posts_per_page' => -1,
+       ]);
+
+       foreach ($services as $key => $service) {
+           $services[$key] = [
+               'title'       => get_the_title($service->ID),
+               'description' => get_the_excerpt($service->ID),
+               'image'       => get_the_post_thumbnail_url($service->ID, 'large'),
+               'icon'        => get_post_meta($service->ID, '_icono_seguro', true),
+               'link'        => get_permalink($service->ID),
+           ];
+       }
    ?>
 
 
@@ -74,7 +59,7 @@
                 <div class="p-10 flex-grow">
                     <div class="flex items-start">
                         <div class="service-icon flex items-center justify-center mr-7">
-                            <i class="<?php echo $service['icon']; ?> text-4xl text-orange-500"></i>
+                            <i class="fa                                         <?php echo $service['icon']; ?> text-4xl text-orange-500"></i>
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold mb-5 text-gray-800"><?php echo $service["title"] ?></h3>

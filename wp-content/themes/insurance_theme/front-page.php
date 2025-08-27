@@ -18,6 +18,8 @@
 <?php require INSURANCE_VIEWS_PATH . '/services-section.php'; ?>
 <?php require INSURANCE_VIEWS_PATH . "/advantages-section.php"; ?>
 
+<?php echo do_shortcode('[seccion_ventajas]') ?>
+
 
  <!-- CUSTOMERS OPINION -->
 

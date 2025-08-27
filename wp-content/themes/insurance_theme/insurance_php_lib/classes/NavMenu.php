@@ -18,6 +18,6 @@ class NavMenu implements Action
 
     private function add_menus()
     {
-        register_nav_menu($this->location, __($this->description, 'insurance'));
+        register_nav_menu($this->location, __($this->description, SITE_NAME));
     }
 }

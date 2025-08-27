@@ -4,7 +4,7 @@
      <div class="flex flex-col lg:flex-row lg:items-center ">
 
 
-         <div class="hero-content bg-white p-4 rounded">
+         <div class="hero-content bg-white p-8 rounded">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#133251] mb-6 leading-tight">
                     Protege a tu <span class="highlight-text">familia</span> con los mejores seguros
                 </h1>

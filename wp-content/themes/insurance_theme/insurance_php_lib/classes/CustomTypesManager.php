@@ -8,7 +8,9 @@ class CustomTypesManager extends ActionManager
 {
     private array $actions = [];
     public function __construct(private array $args)
-    {}
+    {
+        $this->add_actions();
+    }
 
     #[\Override]
     protected function create_action(array $action_args): Action
