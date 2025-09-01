@@ -20,6 +20,7 @@ require INSURANCE_LIB . '/theme-support.php';
 
 require INSURANCE_LIB . "/menus/advantages-menu.php";
 require INSURANCE_LIB . "/menus/testimonials-menu.php";
+require INSURANCE_LIB . "/menus/contact-section.php";
 
 require INSURANCE_LIB . '/metaboxes/seguro-consejos-metabox.php';
 require INSURANCE_LIB . '/metaboxes/seguro-beneficios-metabox.php';
@@ -31,6 +32,7 @@ require INSURANCE_LIB . "/shortcodes/seguro-beneficios.php";
 require INSURANCE_LIB . "/shortcodes/seguro-como-funciona.php";
 require INSURANCE_LIB . "/shortcodes/advantages-menu.php";
 require INSURANCE_LIB . "/shortcodes/testimonials.php";
+require INSURANCE_LIB . "/shortcodes/contact-section.php";
 
 require INSURANCE_LIB . "/meta/meta.php";
 

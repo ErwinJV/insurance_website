@@ -115,6 +115,12 @@ textarea:active {
   outline: none;
 } */
 
+/* HEADER CSS */
+
+.active-link {
+  @apply !text-blue-600;
+}
+
 .swiper {
   @apply w-full h-full;
 }

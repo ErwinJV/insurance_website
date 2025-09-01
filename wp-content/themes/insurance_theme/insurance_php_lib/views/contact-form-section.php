@@ -67,7 +67,7 @@
                 </div>
 
                 <!-- Columna derecha: Formulario -->
-                <?php require INSURANCE_COMPONENTS_PATH . "/contact-form.php"; ?>
+                 <!-- TODO: Formulario de contacto -->
             </div>
         </div>
     </section>
