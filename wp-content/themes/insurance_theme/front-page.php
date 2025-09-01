@@ -1,4 +1,10 @@
 <?php
+    /**
+     * Template Name: Front Page
+     */
+
+?>
+<?php
 
     use insurance_php_lib\classes\Assets;
 
@@ -16,9 +22,13 @@
 <!-- SERVICES SECTION -->
 
 <?php require INSURANCE_VIEWS_PATH . '/services-section.php'; ?>
-<?php require INSURANCE_VIEWS_PATH . "/advantages-section.php"; ?>
+<?php
+    // require INSURANCE_VIEWS_PATH . "/advantages-section.php";
+?>
 
-<?php echo do_shortcode('[seccion_ventajas]') ?>
+<?php
+    echo do_shortcode('[seccion_ventajas]');
+?>
 
 
  <!-- CUSTOMERS OPINION -->
@@ -27,7 +37,7 @@
     //require INSURANCE_VIEWS_PATH . "/customers-opinion.php";
 ?>
 
-<?php require INSURANCE_VIEWS_PATH . "/testimonials-section.php"; ?>
+<?php echo do_shortcode('[testimonios]'); ?>
 
 
 
@@ -67,7 +77,7 @@
 <!-- SERVICES SLIDER -->
 
 <?php
-    require INSURANCE_VIEWS_PATH . "/services-slider.php";
+    // require INSURANCE_VIEWS_PATH . "/services-slider.php";
 ?>
 
 

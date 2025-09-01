@@ -4,7 +4,7 @@
         <article class="bg-white rounded-lg shadow-md overflow-hidden editor-styles-wrapper">
             <!-- Cabecera del post -->
             <div class="p-6 border-b border-gray-100">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4" style="color: #133251;">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4" >
                     <?php the_title(); ?>
                 </h2>
 
@@ -31,7 +31,7 @@
             </div>
 
             <!-- Elemento decorativo con los colores de la marca -->
-            <div class="h-2 w-full bg-orange-500"></div>
+
         </article>
 
         <!-- Enlace para volver atrás -->

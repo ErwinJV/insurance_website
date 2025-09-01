@@ -1,7 +1,7 @@
 <?php
 
     /**
-     * Template Name: Servicios de Seguros
+     * Template Name: Servicio de Seguros
      */
 ?>
 
@@ -15,7 +15,7 @@
 
         <div class="container mx-auto px-4 md:px-6 max-w-screen-xl relative z-10">
             <div class="max-w-3xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">                                                                                                                                                             <?php echo get_the_title(); ?></h1>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <?php echo get_the_title(); ?></h1>
                 <p class="text-xl mb-8 text-white"><?php echo get_the_excerpt(); ?></p>
                 <a href="#contacto" class="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:translate-x-2">
                     Contactar ahora
@@ -40,10 +40,11 @@
 
 
 <?php
-    $slug = get_post_field('post_name', get_post());
-    echo do_shortcode('[beneficios_seguro tipo_seguro="' . $slug . '" numero_ventajas="20"]');
-    echo do_shortcode('[como_funciona_seguro tipo_seguro="' . $slug . '" titulo_seccion="¿Cómo funciona el Seguro"]');
-    echo do_shortcode('[consejos_seguro tipo_seguro="' . $slug . '" numero_consejos="20"]');
+    // $slug = get_post_field('post_name', get_post());
+
+    the_content();
+    // echo do_shortcode('[como_funciona_seguro tipo_seguro="' . $slug . '" titulo_seccion="¿Cómo funciona el Seguro"]');
+    // echo do_shortcode('[consejos_seguro tipo_seguro="' . $slug . '" numero_consejos="20"]');
 
 ?>
 

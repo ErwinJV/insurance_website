@@ -88,11 +88,7 @@ class Schema
             "slug"   => "servicios-seguros",
             "icon"   => "dashicons-shield",
         ],
-        "testimonios"       => [
-            "plural" => "Testimonios",
-            "slug"   => "testimonios",
-            "icon"   => "dashicons-thumbs-up",
-        ],
+
     ];
 
 }

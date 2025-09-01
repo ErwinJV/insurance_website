@@ -40,12 +40,14 @@
             <!-- Encabezado -->
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-[#133251] mb-6">
-                    Consejos para Elegir un Seguro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <?php echo $titulo_seguro; ?>
+                    Consejos para Elegir un Seguro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             <?php echo $titulo_seguro; ?>
                 </h2>
                 <div class="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
-                <p class="text-lg md:text-xl text-[#133251]/90 max-w-3xl mx-auto">
-                    <?php echo $descripcion_seguro; ?>
-                </p>
+                <!-- <p class="text-lg md:text-xl text-[#133251]/90 max-w-3xl mx-auto">
+                    <?php
+                        //echo $descripcion_seguro;
+                        ?>
+                </p> -->
             </div>
 
             <!-- Tarjetas de consejos -->
@@ -54,7 +56,7 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div class="h-48 overflow-hidden">
                         <div class="bg-[#133251] h-full flex items-center justify-center">
-                            <i class="fa                                                                                                                                                                 <?php echo $consejo['icono']; ?> text-6xl text-white"></i>
+                            <i class="fa                                                                                                                                                                                                                                                 <?php echo $consejo['icono']; ?> text-6xl text-white"></i>
                         </div>
                     </div>
                     <div class="p-6">

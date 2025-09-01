@@ -119,10 +119,10 @@
                         <h3 class="text-2xl md:text-3xl font-bold text-[#133251] mb-4">
                             Protegiendo lo que más valoras
                         </h3>
-                        <p class="text-[#133251] mb-5 text-xl font-bold">
+                        <p class="text-[#133251] mb-5 text-xl ">
                             Como agente de seguros certificado con más de 15 años de experiencia, me especializo en crear soluciones personalizadas que protejan lo que más valoras: tu familia, tu patrimonio y tu tranquilidad.
                         </p>
-                        <p class="text-[#133251] text-xl font-bold">
+                        <p class="text-[#133251] text-xl ">
                             Mi enfoque se basa en entender tus necesidades específicas para ofrecerte la cobertura perfecta, con el mejor equilibrio entre protección y costo.
                         </p>
 
