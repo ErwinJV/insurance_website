@@ -21,6 +21,9 @@ require INSURANCE_LIB . '/theme-support.php';
 require INSURANCE_LIB . "/menus/advantages-menu.php";
 require INSURANCE_LIB . "/menus/testimonials-menu.php";
 require INSURANCE_LIB . "/menus/contact-section.php";
+require INSURANCE_LIB . "/menus/hero-section-menu.php";
+require INSURANCE_LIB . "/menus/social-speed-dial-menu.php";
+require INSURANCE_LIB . "/menus/meta-tags-menu.php";
 
 require INSURANCE_LIB . '/metaboxes/seguro-consejos-metabox.php';
 require INSURANCE_LIB . '/metaboxes/seguro-beneficios-metabox.php';
@@ -33,6 +36,8 @@ require INSURANCE_LIB . "/shortcodes/seguro-como-funciona.php";
 require INSURANCE_LIB . "/shortcodes/advantages-menu.php";
 require INSURANCE_LIB . "/shortcodes/testimonials.php";
 require INSURANCE_LIB . "/shortcodes/contact-section.php";
+require INSURANCE_LIB . "/shortcodes/hero-section.php";
+require INSURANCE_LIB . "/shortcodes/social-speed-dial.php";
 
 require INSURANCE_LIB . "/meta/meta.php";
 
@@ -45,12 +50,3 @@ function custom_404_redirect()
 }
 add_action('template_redirect', 'custom_404_redirect');
 
-function my_theme_disable_tailwind_in_editor()
-{
-    // Remover el estilo de Tailwind del editor
-    remove_editor_styles();
-
-    // Cargar solo estilos específicos para el editor
-    add_editor_style('editor-styles.css');
-}
-add_action('after_setup_theme', 'my_theme_disable_tailwind_in_editor');

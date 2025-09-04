@@ -1,26 +1,50 @@
+<?php 
+
+$meta_titulo = get_option('meta_titulo', get_bloginfo('name'));
+$meta_descripcion = get_option('meta_descripcion', get_bloginfo('description'));
+$meta_icono = get_option('meta_icono', '');
+
+$is_post = is_singular('post') || is_singular('servicios-seguros');
+
+$title = $meta_titulo;
+$url = INSURANCE_URI;
+$description = $meta_descripcion;
+$icon = $meta_icono;
+
+if($is_post){
+   $url = get_the_permalink();
+   $description = get_the_excerpt() || $description ;
+   $title = get_the_title();
+   $icon = get_the_post_thumbnail_url();
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Primary Meta Tags -->
-<title>Elvis Jimenez - Insurance Agent</title>
-<meta name="title" content="Elvis Jimenez - Insurance Agent" />
-<meta name="description" content="Elvis Jimenez - Agente de seguros especializado en Seguros Obamacare, Seguros de Gastos Finales, Seguros IUL y Seguros Complementarios (Visión/Dental). Obtén asesoría personalizada para proteger tu salud y tu futuro." />
+<title><?php echo $title; ?></title>
+<meta name="title" content="<?php echo $title; ?>" />
+<meta name="description" content="<?php echo $description; ?>" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://elvisjimenezinsurance.com/" />
-<meta property="og:title" content="Elvis Jimenez - Insurance Agent" />
-<meta property="og:description" content="Elvis Jimenez - Agente de seguros especializado en Seguros Obamacare, Seguros de Gastos Finales, Seguros IUL y Seguros Complementarios (Visión/Dental). Obtén asesoría personalizada para proteger tu salud y tu futuro." />
-<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+<meta property="og:url" content="<?php echo $url; ?>" />
+<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:description" content="<?php echo $description; ?>" />
+<meta property="og:image" content="<?php echo $icon; ?>" />
 
 <!-- X (Twitter) -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="http://elvisjimenezinsurance.com" />
-<meta property="twitter:title" content="Elvis Jimenez - Insurance Agent" />
-<meta property="twitter:description" content="Elvis Jimenez - Agente de seguros especializado en Seguros Obamacare, Seguros de Gastos Finales, Seguros IUL y Seguros Complementarios (Visión/Dental). Obtén asesoría personalizada para proteger tu salud y tu futuro." />
-<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+<meta property="twitter:url" content="<?php echo $url; ?>" />
+<meta property="twitter:title" content="<?php echo $title; ?>" />
+<meta property="twitter:description" content="<?php echo $description; ?>" />
+<meta property="twitter:image" content="<?php echo $icon; ?>" />
 
 <!-- Meta Tags Generated with https://metatags.io -->
     <?php wp_head(); ?>
@@ -81,5 +105,7 @@
 </nav>
 
 </header>
+
+<?php echo do_shortcode("[speed_dial]"); ?>
 
 <!-- <div class="py-6"></div> -->

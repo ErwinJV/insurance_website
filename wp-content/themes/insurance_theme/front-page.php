@@ -15,7 +15,7 @@
 
 <!-- MAIN SECTION -->
 
-<?php require INSURANCE_VIEWS_PATH . "/hero-section.php"; ?>
+<?php echo do_shortcode("[hero_section]") ?>
 
 
 <!-- SERVICES SECTION -->
