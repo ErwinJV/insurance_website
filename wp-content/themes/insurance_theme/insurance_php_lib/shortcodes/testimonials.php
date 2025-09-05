@@ -54,7 +54,7 @@ function testimonios_shortcode($atts)
                                         <div class="flex items-start mb-4 md:mb-6">
                                             <img src="<?php echo esc_url($testimonio->imagen); ?>"
                                                  alt="<?php echo esc_attr($testimonio->nombre); ?>"
-                                                 class="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-4 border-white shadow-lg">
+                                                 class="w-12 h-12 md:w-18 md:h-18 rounded-full object-cover border-4 border-white shadow-lg">
                                             <div class="ml-4 md:ml-5">
                                                 <h3 class="font-bold text-base md:text-lg lg:text-xl text-[#133251]"><?php echo esc_html($testimonio->nombre); ?></h3>
                                                 <div class="flex mt-1">

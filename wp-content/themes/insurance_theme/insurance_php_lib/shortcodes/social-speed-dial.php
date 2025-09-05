@@ -11,7 +11,7 @@ function speed_dial_shortcode() {
     ob_start();
     ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <div class="fixed bottom-6 right-6 z-50 group">
+    <div class="fixed bottom-6 right-6 z-50 group ">
         <div id="speed-dial-menu-default" class="flex flex-col items-center hidden mb-4 space-y-2">
             <?php if ($whatsapp): ?>
                 <a href="<?php echo esc_url($whatsapp); ?>" target="_blank" class="flex justify-center items-center w-12 h-12 text-white bg-green-500 rounded-full border border-gray-200 shadow-sm hover:bg-green-600 focus:ring-4 focus:ring-green-300 focus:outline-none transition-all duration-200">
@@ -49,7 +49,7 @@ function speed_dial_shortcode() {
             <?php endif; ?>
         </div>
         
-        <button type="button" id="speed-dial-button" class="flex items-center justify-center w-14 h-14 text-white bg-blue-700 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-all duration-200">
+        <button type="button" id="speed-dial-button" class="flex items-center justify-center w-14 h-14 text-white bg-orange-600 rounded-full hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-all duration-200">
             <i class="fas fa-plus text-xl transition-transform group-hover:rotate-45"></i>
             <span class="sr-only">Abrir acciones</span>
         </button>

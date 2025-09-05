@@ -43,7 +43,7 @@
         </div>
 
         <!-- Grid de tarjetas - 2 columnas en tablet y desktop -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
             <!-- Tarjeta  -->
           <?php foreach ($services as $service): ?>
 
@@ -56,14 +56,14 @@
                         loading="lazy"
                     >
                 </div>
-                <div class="p-10 flex-grow">
+                <div class="p-5 lg:p-10 flex-grow">
                     <div class="flex items-start">
                         <div class="service-icon flex items-center justify-center mr-7">
-                            <i class="fa                                         <?php echo $service['icon']; ?> text-4xl text-orange-500"></i>
+                            <i class="fa <?php echo $service['icon']; ?> text-2xl lg:text-4xl text-orange-500"></i>
                         </div>
                         <div>
-                            <h3 class="text-3xl font-bold mb-5 text-gray-800"><?php echo $service["title"] ?></h3>
-                            <p class="text-gray-600 mb-7 text-lg leading-relaxed">
+                            <h3 class="text-xl lg:text-3xl font-bold mb-5 text-gray-800"><?php echo $service["title"] ?></h3>
+                            <p class="text-gray-600 mb-3 text-xs md:text-lg lg:text-xl leading-relaxed">
                              <?php echo $service['description']; ?>
                             </p>
                             <a href="<?php echo $service['link']; ?>" class="learn-more text-orange-500 font-semibold text-lg">

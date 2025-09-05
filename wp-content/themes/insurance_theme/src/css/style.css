@@ -574,9 +574,9 @@ textarea:active {
     right: 50%;
     transform: translateX(50%);
   }
-  .next-button:hover {
+  /* .next-button:hover {
     transform: translateX(50%) scale(1.1);
-  }
+  } */
 }
 
 /* GASTOS FINALES METRICAS  */
@@ -854,6 +854,66 @@ textarea:active {
 /* Estilos para el placeholder de bloques */
 .editor-styles-wrapper .block-editor-default-block-appender__content {
   @apply text-gray-400;
+}
+
+@keyframes shake-soft {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(2px) rotate(1deg);
+  }
+}
+
+.btn-sacudir {
+  /* @apply relative; */
+  /* Asegura que la posición relativa funcione para futuras mejoras si necesitas moverlo */
+  animation: shake-soft 0.8s ease-in-out infinite; /* Aplica la animación */
+  transform-origin: center; /* Asegura que la rotación sea desde el centro */
+}
+
+@keyframes vibrate-subtle {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-0.5px);
+  }
+  40% {
+    transform: translateX(0.5px);
+  }
+  60% {
+    transform: translateX(-0.5px);
+  }
+  80% {
+    transform: translateX(0.5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn-vibrar {
+  @apply relative;
+  animation: vibrate-subtle 0.2s ease-in-out infinite; /* Animación más rápida para vibración */
+  /* Añadimos un pequeño filtro de brillo en hover para llamar aún más la atención */
+  filter: brightness(100%);
+  transition: filter 0.3s ease; /* Transición suave para el brillo */
+}
+
+.btn-vibrar:hover {
+  filter: brightness(115%); /* Ligeramente más brillante en hover */
 }
 /* .swiper-container {
   width: 100%;
