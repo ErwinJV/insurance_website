@@ -13,6 +13,13 @@
         $horario            = get_option('contacto_horario', "Lunes a Viernes: 9am - 6pm\nSábados: 10am - 2pm");
         $direccion          = get_option('contacto_direccion', "123 Calle Seguridad\nMiami, FL 33101");
         $imagen_agente      = get_option('contacto_imagen_agente', '');
+        
+        // Obtener enlaces de redes sociales
+        $whatsapp = get_option('speed_dial_whatsapp', '');
+        $instagram = get_option('speed_dial_instagram', '');
+        $facebook = get_option('speed_dial_facebook', '');
+        $telefono = get_option('speed_dial_telefono', '');
+        $email = get_option('speed_dial_email', '');
 
         // Convertir saltos de línea en <p> o <br>
         $horario   = nl2br(esc_html($horario));
@@ -92,19 +99,65 @@
                             <p class="text-gray-600"><?php echo $direccion; ?></p>
                         </div>
                     </div>
+                    
+                    <!-- Redes Sociales (solo Facebook e Instagram) -->
+                    <div class="mt-10">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Síguenos en redes sociales</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <?php if ($facebook): ?>
+                                <a href="<?php echo esc_url($facebook); ?>" target="_blank" class="flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors duration-200">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            <?php endif; ?>
+                            
+                            <?php if ($instagram): ?>
+                                <a href="<?php echo esc_url($instagram); ?>" target="_blank" class="flex items-center justify-center w-10 h-10 text-white bg-pink-600 rounded-full hover:bg-pink-700 transition-colors duration-200">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            <?php endif; ?>
+                            
+                            <?php if ($email): ?>
+                                <a href="mailto:<?php echo esc_attr($email); ?>" class="flex items-center justify-center w-10 h-10 text-white bg-red-500 rounded-full hover:bg-red-600 transition-colors duration-200">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Columna derecha: Formulario -->
                 <div class="lg:pl-8">
-                  <div class="p-6 bg-white">
+                    <!-- Contacto directo (WhatsApp y Teléfono) - Arriba del formulario -->
+                    <div class="mb-8 p-6 bg-white rounded-xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">¿Prefieres contactarnos directamente?</h3>
+                        <p class="text-gray-600 mb-4">Estamos disponibles para atenderte de inmediato</p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <?php if ($whatsapp): ?>
+                                <a href="<?php echo esc_url($whatsapp); ?>" target="_blank" class="flex items-center px-4 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200">
+                                    <i class="fab fa-whatsapp text-xl mr-2"></i>
+                                    <span>Chatear por WhatsApp</span>
+                                </a>
+                            <?php endif; ?>
+                            
+                            <?php if ($telefono): ?>
+                                <a href="tel:<?php echo esc_attr($telefono); ?>" class="flex items-center px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                                    <i class="fas fa-phone text-xl mr-2"></i>
+                                    <span>Llamar ahora</span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
 
-                   <?php echo do_shortcode($shortcode); ?>
-                  </div>
+                    <!-- Formulario de contacto -->
+                    <div class="p-6 bg-white rounded-xl shadow-sm">
+                        <?php echo do_shortcode($shortcode); ?>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <?php
-
+        return ob_get_clean();
     }

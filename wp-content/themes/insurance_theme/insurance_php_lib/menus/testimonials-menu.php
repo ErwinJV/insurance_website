@@ -89,6 +89,17 @@
             }
         }
 
+        // Procesar guardado de la configuración del agente
+        if (isset($_POST['guardar_config_agente']) && wp_verify_nonce($_POST['config_agente_nonce'], 'guardar_config_agente')) {
+            update_option('testimonios_agente_imagen', esc_url_raw($_POST['agente_imagen']));
+            update_option('testimonios_agente_titulo', sanitize_text_field($_POST['agente_titulo']));
+            update_option('testimonios_agente_descripcion1', sanitize_textarea_field($_POST['agente_descripcion1']));
+            update_option('testimonios_agente_descripcion2', sanitize_textarea_field($_POST['agente_descripcion2']));
+            update_option('testimonios_agente_boton_texto', sanitize_text_field($_POST['agente_boton_texto']));
+
+            echo '<div class="notice notice-success is-dismissible"><p>Configuración del agente guardada correctamente.</p></div>';
+        }
+
         // Obtener testimonio para editar
         $testimonio_editar = null;
         if (isset($_GET['editar']) && wp_verify_nonce($_GET['_wpnonce'], 'editar_testimonio')) {
@@ -98,6 +109,13 @@
 
         // Obtener todos los testimonios
         $testimonios = $wpdb->get_results("SELECT * FROM $tabla_testimonios ORDER BY orden ASC, fecha_creacion DESC");
+
+        // Obtener valores actuales del agente
+        $agente_imagen = get_option('testimonios_agente_imagen', '');
+        $agente_titulo = get_option('testimonios_agente_titulo', 'Protegiendo lo que más valoras');
+        $agente_descripcion1 = get_option('testimonios_agente_descripcion1', 'Como agente de seguros certificado con más de 15 años de experiencia, me especializo en crear soluciones personalizadas que protejan lo que más valoras: tu familia, tu patrimonio y tu tranquilidad.');
+        $agente_descripcion2 = get_option('testimonios_agente_descripcion2', 'Mi enfoque se basa en entender tus necesidades específicas para ofrecerte la cobertura perfecta, con el mejor equilibrio entre protección y costo.');
+        $agente_boton_texto = get_option('testimonios_agente_boton_texto', 'Contactar ahora');
 
         // Verificar si hay errores de base de datos
         if ($wpdb->last_error) {
@@ -115,7 +133,7 @@
 
                 <form method="post" action="">
                     <?php wp_nonce_field('guardar_testimonio', 'testimonio_nonce'); ?>
-<?php if ($testimonio_editar): ?>
+                    <?php if ($testimonio_editar): ?>
                         <input type="hidden" name="testimonio_id" value="<?php echo $testimonio_editar->id; ?>">
                     <?php endif; ?>
 
@@ -202,6 +220,58 @@
                     <p>No hay testimonios aún. Agrega el primero usando el formulario.</p>
                 <?php endif; ?>
             </div>
+
+            <!-- Sección de configuración del agente -->
+            <div style="flex-basis: 100%; margin-top: 30px; background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <h2>Configuración de la Sección del Agente</h2>
+
+                <form method="post" action="">
+                    <?php wp_nonce_field('guardar_config_agente', 'config_agente_nonce'); ?>
+
+                    <table class="form-table">
+                        <tr>
+                            <th scope="row"><label for="agente_imagen">URL de la Imagen del Agente</label></th>
+                            <td>
+                                <input type="url" id="agente_imagen" name="agente_imagen" value="<?php echo esc_url($agente_imagen); ?>" class="regular-text">
+                                <button type="button" class="button button-secondary upload-imagen-agente" style="margin-top: 5px;">Seleccionar Imagen</button>
+                                <?php if (! empty($agente_imagen)): ?>
+                                    <div style="margin-top: 10px;">
+                                        <img src="<?php echo esc_url($agente_imagen); ?>" alt="Vista previa" style="max-width: 200px; height: auto; border-radius: 4px;">
+                                    </div>
+                                <?php endif; ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="agente_titulo">Título del Agente</label></th>
+                            <td>
+                                <input type="text" id="agente_titulo" name="agente_titulo" value="<?php echo esc_attr($agente_titulo); ?>" class="regular-text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="agente_descripcion1">Primer Párrafo</label></th>
+                            <td>
+                                <textarea id="agente_descripcion1" name="agente_descripcion1" rows="3" class="large-text"><?php echo esc_textarea($agente_descripcion1); ?></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="agente_descripcion2">Segundo Párrafo</label></th>
+                            <td>
+                                <textarea id="agente_descripcion2" name="agente_descripcion2" rows="3" class="large-text"><?php echo esc_textarea($agente_descripcion2); ?></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="agente_boton_texto">Texto del Botón</label></th>
+                            <td>
+                                <input type="text" id="agente_boton_texto" name="agente_boton_texto" value="<?php echo esc_attr($agente_boton_texto); ?>" class="regular-text">
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p class="submit">
+                        <input type="submit" name="guardar_config_agente" class="button button-primary" value="Guardar Configuración del Agente">
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -228,6 +298,29 @@
                 // Mostrar vista previa
                 $('#imagen').nextAll('img').remove();
                 $('<div style="margin-top: 10px;"><img src="' + attachment.url + '" alt="Vista previa" style="max-width: 100px; height: auto; border-radius: 4px;"></div>').insertAfter($('#imagen').next('button'));
+            }).open();
+        });
+
+        // Uploader de medios para la imagen del agente
+        $('.upload-imagen-agente').click(function(e) {
+            e.preventDefault();
+
+            var custom_uploader = wp.media({
+                title: 'Seleccionar Imagen del Agente',
+                library: {
+                    type: 'image'
+                },
+                button: {
+                    text: 'Usar esta imagen'
+                },
+                multiple: false
+            }).on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                $('#agente_imagen').val(attachment.url);
+
+                // Mostrar vista previa
+                $('#agente_imagen').nextAll('div').remove();
+                $('<div style="margin-top: 10px;"><img src="' + attachment.url + '" alt="Vista previa" style="max-width: 200px; height: auto; border-radius: 4px;"></div>').insertAfter($('#agente_imagen').next('button'));
             }).open();
         });
     });

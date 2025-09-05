@@ -82,7 +82,7 @@
         </div>
 
         <!-- CTA Final -->
-        <div class="text-center mt-24">
+        <!-- <div class="text-center mt-24">
             <div class="bg-white relative bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-12 shadow-2xl max-w-4xl mx-auto overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-full opacity-10">
                     <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-white"></div>
@@ -100,11 +100,9 @@
                         <i class="fas fa-phone-alt mr-3"></i>Solicitar Asesoría Gratis
                     </button>
                     <div class="mt-8">
-                        <!-- <span class="text-orange-500 text-sm flex items-center justify-center">
-                            <i class="fas fa-star mr-2"></i>Más de 15 años protegiendo familias hispanas
-                        </span> -->
+                   
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>

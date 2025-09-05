@@ -490,7 +490,7 @@ textarea:active {
   opacity: 0.1;
   color: #133251;
 }
-
+/* 
 .next-button {
   position: absolute;
   top: 50%;
@@ -513,7 +513,7 @@ textarea:active {
 .next-button:hover {
   background-color: #ea580c;
   transform: translateY(-50%) scale(1.1);
-}
+} */
 
 /* GASTOS FINALES SECTION CLASSES */
 

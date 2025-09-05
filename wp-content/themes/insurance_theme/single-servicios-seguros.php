@@ -40,13 +40,24 @@
 
 
 <?php
-    // $slug = get_post_field('post_name', get_post());
+     $slug = get_post_field('post_name', get_post());
 
-    the_content();
-    // echo do_shortcode('[como_funciona_seguro tipo_seguro="' . $slug . '" titulo_seccion="¿Cómo funciona el Seguro"]');
-    // echo do_shortcode('[consejos_seguro tipo_seguro="' . $slug . '" numero_consejos="20"]');
-
+     echo do_shortcode('[beneficios_seguro tipo_seguro="'. $slug .'" numero_ventajas="20"]');
+     echo do_shortcode('[como_funciona_seguro tipo_seguro="' . $slug . '" titulo_seccion="¿Cómo funciona el Seguro"]');
+     echo do_shortcode('[consejos_seguro tipo_seguro="' . $slug . '" numero_consejos="20"]');
+       
 ?>
+
+<?php echo do_shortcode('[testimonios]'); ?>
+
+  <!-- CONTACT FORM -->
+  <div class="h-16"></div>
+<?php
+    echo do_shortcode("[seccion_contacto]");
+?>
+
+
+<div class="h-16"></div>
 
 
 <?php get_footer(); ?>
