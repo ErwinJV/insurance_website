@@ -1,6 +1,6 @@
 import Alpine from "alpinejs";
 import Swiper from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import { padFooter } from "./frontend";
 
 Swiper.use([Autoplay, Navigation]);
