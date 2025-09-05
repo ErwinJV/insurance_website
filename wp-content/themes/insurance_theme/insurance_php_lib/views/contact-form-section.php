@@ -1,5 +1,6 @@
     <!-- Sección de contacto -->
-    <section class="contact-section ">
+    <section class="contact-section" id="contacto" >
+>
         <div class="contact-content">
             <!-- Titulo de la sección -->
             <div class="text-center mb-16">
@@ -66,10 +67,7 @@
                 </div>
 
                 <!-- Columna derecha: Formulario -->
-                <div class="contact-form-container">
-                    <!-- Aquí se insertará el formulario mediante shortcode -->
-                  <?php echo do_shortcode('[contact-form-7 id="4f35d61" title="Contactanos"]'); ?>
-                </div>
+                 <!-- TODO: Formulario de contacto -->
             </div>
         </div>
     </section>

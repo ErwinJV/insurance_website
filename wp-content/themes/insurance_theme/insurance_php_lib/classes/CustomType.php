@@ -36,7 +36,7 @@ class CustomType implements Action
             'items_list'            => __('List ' . $this->type, SITE_NAME),
             'items_list_navigation' => __('Navigation ' . $this->data['plural'], SITE_NAME),
             'filter_items_list'     => __('Filter ' . $this->data['plural'], SITE_NAME),
-            'not_found'             => __('No found', 'sushi'),
+            'not_found'             => __('No found', SITE_NAME),
             'not_found_in_trash'    => __('Not found in trash', SITE_NAME),
         ];
 
@@ -85,7 +85,7 @@ class CustomType implements Action
             'rest_controller_class' => 'WP_REST_Posts_Controller',
         ];
 
-        register_post_type('cpt-' . $this->type, $args);
+        register_post_type($this->type, $args);
 
         flush_rewrite_rules();
 

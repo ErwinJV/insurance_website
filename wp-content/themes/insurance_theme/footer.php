@@ -1,37 +1,57 @@
 
 
 
-<footer class="flex flex-col items-center justify-center bg-[url(/src/img/insurance-footer-background.webp)] bg-cover bg-bottom  py-12 m-h-[] ">
+<footer class="flex flex-col items-center justify-center bg-[url(/src/img/insurance-footer-background.webp)]  py-12 m-h-[] ">
     <div class="container mx-auto   p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="#" class="flex items-center">
-               <img src="<?php echo INSURANCE_RESOURCES_URI . '/img/elvis-jimenez-insurance-logotype.jpg' ?>" class="w-[320px]" alt="Elvis JimenezInsurance Logotype" />
+
+              <?php require INSURANCE_COMPONENTS_PATH . '/logotype-footer.php'; ?>
 
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Servicios</h2>
+                  <?php
+
+                      wp_nav_menu([
+                          'theme_location' => 'main_navigation',
+                          'menu_class'     => 'footer-services',
+                          // 'container'      => 'nav',
+                          // 'container_class' => 'mi-contenedor-menu',
+                      ]);
+
+                  ?>
+                  <!-- <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
                           <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
                       </li>
                       <li>
                           <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
                       </li>
-                  </ul>
+                  </ul> -->
               </div>
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
-                  <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Siguenos</h2>
+                  <?php
+
+                      wp_nav_menu([
+                          'theme_location' => 'social_links',
+                          'menu_class'     => 'footer-social-links',
+
+                      ]);
+
+                  ?>
+                  <!-- <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
                           <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                       </li>
                       <li>
                           <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
                       </li>
-                  </ul>
+                  </ul> -->
               </div>
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
@@ -48,9 +68,15 @@
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">   
+         <?php echo date("Y"); ?> <a href="/" class="hover:underline">Elvis Jimenez Insurance Agent™</a>. All Rights Reserved.
+         </span>
+
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">   
+          This WordPress theme website was developed by <a target="_blank"  class="underline" href="https://www.linkedin.com/in/erwin-jimenez/">Erwin Jimenez</a>
+         </span>
+         
+          <!-- <div class="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                   <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                         <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
@@ -81,7 +107,7 @@
                 </svg>
                   <span class="sr-only">Dribbble account</span>
               </a>
-          </div>
+          </div> -->
       </div>
     </div>
 </footer>
@@ -90,11 +116,3 @@
    </body>
  </html>
 
- <?php
-     //     wp_nav_menu([
-     //         'theme_location' => 'social_links_footer',
-     //         'container_id'   => 'social-links-footer',
-     //         'menu_id'        => 'social-links-footer-menu',
-     //         'menu_class'     => 'px-2 flex flex-row space-x-7 sm:space-x-10',
- // ]);
- ?>

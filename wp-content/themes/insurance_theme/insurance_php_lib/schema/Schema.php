@@ -10,11 +10,20 @@ class Schema
             'type_script' => 'front',
             'name'        => 'insurance-main-script-js',
             'path_uri'    => 'src/main.ts',
-            'deps'        => [],
+            'deps'        => ["jquery"],
             'version'     => '1.0',
             'args'        => ['strategy' => 'defer'],
             'is_cdn'      => false,
         ],
+        // [
+        //     'type_script' => 'back',
+        //     'name'        => 'font-awesome-back',
+        //     'path_uri'    => 'src/main.ts',
+        //     'deps'        => ['jquery'],
+        //     'version'     => '1.0',
+        //     'args'        => [],
+        //     'is_cdn'      => false,
+        // ],
         [
             'type_script' => 'front',
             'name'        => 'flowbite-script-js',
@@ -61,15 +70,25 @@ class Schema
 
         'post-thumbnails',
         'widgets',
-        ['custom-logo', [
-            'height'      => 100,
-            'width'       => 300,
+        // ['custom-logo', [
+        //     'height'      => 100,
+        //     'width'       => 300,
 
-            'flex-width'  => true,
-            'flex-height' => true,
-            'header-text' => [SITE_NAME, SITE_NAME . ' logo'],
+        //     'flex-width'  => true,
+        //     'flex-height' => true,
+        //     'header-text' => [SITE_NAME, SITE_NAME . ' logo'],
+        // ],
+        // ],
+    ];
+
+    public static array $custom_types = [
+
+        "servicios-seguros" => [
+            "plural" => "Servicios de Seguros",
+            "slug"   => "servicios-seguros",
+            "icon"   => "dashicons-shield",
         ],
-        ],
+
     ];
 
 }

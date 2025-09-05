@@ -1,0 +1,96 @@
+/* admin-contacto.css */
+.contacto-admin-wrapper {
+  max-width: 1200px;
+}
+
+.contacto-admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.contacto-admin-col {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contacto-admin-col h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f1;
+  color: #2c3338;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c3338;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+.form-field .description {
+  font-style: italic;
+  color: #646970;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.imagen-actual {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f6f7f7;
+  border-radius: 4px;
+}
+
+.imagen-actual p {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.eliminar-imagen {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .contacto-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 782px) {
+  .contacto-admin-col {
+    padding: 15px;
+  }
+
+  .form-field input[type="text"],
+  .form-field input[type="email"],
+  .form-field textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+}
