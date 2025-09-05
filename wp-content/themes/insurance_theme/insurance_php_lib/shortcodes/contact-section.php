@@ -30,7 +30,7 @@
         ob_start();
     ?>
     <!-- Sección de contacto -->
-    <section class="contact-section" id="contacto">
+    <section class="contact-section pb-4" id="contacto" >
 
         <div class="contact-content">
             <!-- Titulo de la sección -->
@@ -156,6 +156,8 @@
                 </div>
             </div>
         </div>
+    
+        <?php require INSURANCE_COMPONENTS_PATH . "/aliados.php"; ?>
     </section>
 
     <?php
