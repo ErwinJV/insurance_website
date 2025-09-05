@@ -7,38 +7,38 @@ Swiper.use([Autoplay, Navigation]);
 // import Swiper and modules styles
 
 // init Swiper:
-new Swiper(".swiper", {
-  // configure Swiper to use modules
-  autoplay: true,
+// new Swiper(".swiper", {
+//   // configure Swiper to use modules
+//   autoplay: true,
 
-  modules: [Navigation, Pagination],
-  direction: "horizontal",
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: "auto", // Para slides de ancho variable
-  freeMode: true, // Útil cuando hay overflow
-  observer: true, // Detecta cambios en el DOM
-  observeParents: true, // Observa contenedores padres
-  resizeObserver: true, // Para responsive
+//   modules: [Navigation, Pagination],
+//   direction: "horizontal",
+//   loop: true,
+//   spaceBetween: 10,
+//   slidesPerView: "auto", // Para slides de ancho variable
+//   freeMode: true, // Útil cuando hay overflow
+//   observer: true, // Detecta cambios en el DOM
+//   observeParents: true, // Observa contenedores padres
+//   resizeObserver: true, // Para responsive
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
 
-  effect: "fade",
+//   effect: "fade",
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
 
 const testimonialsSwiper = new Swiper(".testimonials-swiper", {
   loop: true,
@@ -53,6 +53,7 @@ const testimonialsSwiper = new Swiper(".testimonials-swiper", {
   },
   autoplay: {
     disableOnInteraction: false,
+    delay: 5000,
   },
   effect: "fade",
   fadeEffect: {
